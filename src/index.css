@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+
+:root { 
+    --font-principal: 'Hi Melody', cursive;
+}
+
+body { 
+    font-family: var(--font-principal);
+}
+
