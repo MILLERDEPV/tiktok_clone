@@ -7,3 +7,4 @@
 
 #secret files 
 node_modules/
+.env
