@@ -1,18 +1,114 @@
-div {
+.video-container {
     border: 1px solid black;
-    aspect-ratio: 9/15;
     border-radius: 3px;
     width: 375px;
-    height: auto;
+    height: auto; 
     margin: auto;
+    overflow: hidden; 
+    position: relative;
+}
+
+.video-inner-container {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 3px;
+    display: block;
+    height: auto;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    transition: ease 300ms; 
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.play-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 3em;
+    opacity: .3;
+    transition: ease 300ms; 
+}
+
+.options {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 3.8em;
+    padding: 1.5em;
+    background: #000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+.options > div {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    cursor: pointer;
+}
+
+.options > div > span {
+    color: #fff;
+    text-align: center;
+}
+
+.options > div > svg {
+    color: #fff;
+    font-size: 1.3em;
     overflow: hidden;
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.plus-icon {
+    background: #fff;
+    color: #000 !important; 
+    padding: .2em .5em;
+    border-radius: .3em;
+    border-left: 4px solid #5fbefe;
+    border-right: 4px solid #db0972;
 }
+
+.user-interactions {
+    width: 20%;
+    aspect-ratio: 5/16;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.user-interactions > div {
+    margin-right: 0.4em;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.user-interactions > div > span{
+    text-align: center;
+    color: #fff; 
+    font-size: 30px;
+}
+
+.user-interactions > div > svg{
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.user > img{
+    border-radius: 100%;
+    width: 50px;
+}
+
